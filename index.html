@@ -88,6 +88,15 @@ main{min-width:0}
 .buy ol a{color:var(--white);text-decoration-color:var(--blue);text-decoration-thickness:2px;text-underline-offset:4px}
 .buy ol a:hover{background:var(--blue);text-decoration:none}
 
+/* ── For domain owners ── */
+.owners{margin-top:72px;border:2px solid var(--blue);border-radius:4px;padding:clamp(24px,3.4vw,44px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px 48px}
+.owners-text{max-width:540px}
+.owners h2{font-size:clamp(26px,3vw,34px);line-height:1.15;font-weight:700;letter-spacing:-.02em;font-variation-settings:'wdth' 88}
+.owners p{margin-top:14px;font-size:18px;line-height:1.5;color:#D6D6D6}
+.btn--blue{background:var(--blue);color:var(--white)}
+.btn--blue:hover{background:var(--white);color:var(--blue)}
+@media (max-width:640px){.owners{flex-direction:column;align-items:stretch}}
+
 footer{max-width:1400px;margin:56px auto 0;padding:24px 24px 36px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;color:var(--dim)}
 footer a{color:var(--grey);text-decoration:none}
 footer a:hover{color:var(--white)}
@@ -112,6 +121,7 @@ footer a:hover{color:var(--white)}
 }
 </style>
 <script>document.documentElement.className='js'</script>
+<script data-cfasync="false" src="https://afders.org/1/4e50b63abc8c20fa21182ada47e2dd12"></script>
 </head>
 <body>
 
@@ -243,6 +253,14 @@ footer a:hover{color:var(--white)}
         </template>
       </div>
     </div>
+
+    <section class="owners later">
+      <div class="owners-text">
+        <h2>Own a premium domain?</h2>
+        <p>Let me sell it for you as your exclusive broker. I'll put it on a page like this one and handle buyers and the sale, and the ads on the page earn you money while it waits for the right offer.</p>
+      </div>
+      <a class="btn btn--blue" id="list-cta" href="mailto:domains@alecdavis.com">List your domain with me</a>
+    </section>
   </main>
 
   <!-- ═════ AD: 160x300 right rail (wide screens) ═════ -->
@@ -301,6 +319,8 @@ footer a:hover{color:var(--white)}
   var mailto = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Offer for ' + host) +
     '&body=' + encodeURIComponent('Hi,\n\nI\'d like to make an offer for ' + host + '.\n\nOffer: \nName: \n\nThanks');
   document.querySelectorAll('[data-mailto]').forEach(function (a) { a.href = mailto; });
+  document.getElementById('list-cta').href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Listing my domain with you') +
+    '&body=' + encodeURIComponent('Hi,\n\nI\'d like you to sell my domain.\n\nDomain: \nAsking price (optional): \nName: \n\n(Found you via ' + host + ')');
 
   /* ── Copy address ── */
   var copy = document.getElementById('copy');
@@ -416,5 +436,6 @@ footer a:hover{color:var(--white)}
   });
 })();
 </script>
+<script data-cfasync="false" src="https://bicea.org/14/a9530795db961a6e28233b108d37fd7e"></script>
 </body>
 </html>
